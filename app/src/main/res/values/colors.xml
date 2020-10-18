@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="darkPrimary">#212121</color>
 
-
+    <color name="hint">#A3A3A3</color>
     <color name="darkBlue">#4D01579B</color>
     <color name="orange">#B3FF6F00</color>
     <color name="dark_selected">#5A595B</color>

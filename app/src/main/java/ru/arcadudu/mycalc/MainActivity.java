@@ -5,6 +5,7 @@ import android.text.SpannableStringBuilder;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +14,8 @@ import org.mariuszgromada.math.mxparser.Expression;
 public class MainActivity extends AppCompatActivity {
 
     private EditText display;
-    ImageButton ibBackspace;
+    private TextView history;
+    private ImageButton ibBackspace;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
         display = findViewById(R.id.et_display);
         display.setShowSoftInputOnFocus(false); // remove keyboard appearance
+
+        history = findViewById(R.id.history);
 
 
         // longPush for backspace
@@ -102,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
     // ops buttons
     public void clearBtn(View view) {
         display.setText("");
+        history.setText("");
     }
 
     public void plusBtn(View view) {
@@ -156,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void equalsBtn(View view) {
         String expression = display.getText().toString();
+        history.setText(expression);
         expression = expression.replaceAll("÷", "/");
         expression = expression.replaceAll("×", "*");
 

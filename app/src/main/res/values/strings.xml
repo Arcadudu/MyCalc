@@ -22,4 +22,5 @@
     <string name="equals">=</string>
 
     <string name="display_hint">input here</string>
+    <string name="backspace_icon">backspace icon</string>
 </resources>
